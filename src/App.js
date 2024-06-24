@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 import ProductList from './components/ProductList';
+import CartProvider from '../components/CartProvider'; 
 // import components
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
@@ -12,7 +13,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden'>``
       <Router>
         <Header />
         <Routes>
