@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 Clone the repository:
 
 git clone <repository-url>
-cd e-shop
+cd AngelasEshop
 
 Install dependencies:
 npm install
