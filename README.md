@@ -1,1 +1,1 @@
-# AngelasEshop
+# ecommerce-shop-starter
