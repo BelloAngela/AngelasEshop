@@ -4,15 +4,25 @@ Welcome to my E-Shop, a fully-functional front-end e-commerce application built 
 
 Features
 Product Listings: Browse through a variety of products, including categories such as men's clothing and women's clothing.
+
 Product Details: View detailed information about each product, including descriptions, photos, and prices.
+
 Sorting and Filtering: Sort products by price (low to high or high to low) and by name (A to Z or Z to A).
+
 Cart Management: Add items to the cart, adjust quantities, remove products, and clear the entire cart.
+
 Responsive Design: The application is designed to be responsive, ensuring a seamless experience across devices of various screen sizes.
+
 Technologies Used
 Front-End: React.js, React Router for navigation, Tailwind CSS for styling.
+
 API: Utilized the Fake Store API (https://fakestoreapi.com/) for fetching product data.
+
 State Management: Context API for managing global state (cart state, product state).
+
 Deployment: Deployed on Netlify for live preview.
+
+
 Getting Started
 To run this project locally, follow these steps:
 
