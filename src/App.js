@@ -1,6 +1,10 @@
 import React from 'react';
 // import react router dom
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//import NavBar
+import NavBar from './components/NavBar';
+import Register from '../pages/Register';
+
 // import pages
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
@@ -17,10 +21,12 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
+          <Route Path='/' element={<Register/>}
           <Route path='/' element={<Home />} />
           <Route path='/product/:id' element={<ProductDetails />} />
           <Route path='/products' element={<ProductList />} /> 
         </Routes>
+        <NavBar/>
         <Sidebar />
         <Footer />
       </Router>
