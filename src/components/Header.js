@@ -1,13 +1,14 @@
+//Imports necessary modules from React library, hooks for magaging component state and contexts
 import React, { useContext, useEffect, useState } from 'react';
-// sidebar context
+// sidebar context provide access to sidebar state and cart data across the app
 import { SidebarContext } from '../contexts/SidebarContext';
 // cart context
 import { CartContext } from '../contexts/CartContext';
 // import icons
 import { BsBag } from 'react-icons/bs';
-// import link
+// import link (imports link component from react router dom for navigation within the React app)
 import { Link } from 'react-router-dom';
-// import logo
+// import logo Imports an image (logo.svg) to be displayed as the logo in the header.
 import Logo from '../img/logo.svg';
 
 const Header = () => {
@@ -50,5 +51,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
