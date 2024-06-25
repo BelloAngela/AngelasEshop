@@ -1,16 +1,25 @@
 import {useNavigate} from 'react-router-dom';
-import {useState} from 'react';
-import {register} from '../API';
-
-export default function Register() {
+import {useState, useContext} from 'react';
+import {login} from '../API';
+import AuthContext from '../context/AuthContext';
+function Login() {
+  const {setToken} = useContext(AuthContext);
   const [formData, setFormData] = useState({
-    first_name: '',
-    last_name: '',
     email: '',
     password: '',
   });
+
+  const {email, password} = formData;
   const navigate = useNavigate();
-  const {first_name, last_name, password, email} = formData;
+
+  async function handleSubmit(event) {
+    event.preventDefault(event);
+    const result = await login(formData);
+    if (result.token) {
+      setToken(result.token);
+      navigate('/profile');
+    }
+  }
 
   function handleOnChange(event) {
     setFormData((prevState) => ({
@@ -19,55 +28,9 @@ export default function Register() {
     }));
   }
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const result = await register(formData);
-    if (result.user) {
-      navigate('/profile');
-    }
-  }
-
   return (
     <div className=' mt-10 sm:mx-auto sm:w-full sm:max-w-sm p-5 border rounded'>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label
-            htmlFor='first_name'
-            className='block text-sm font-medium leading-6 text-gray-900'
-          >
-            First Name
-          </label>
-          <div className='mt-2'>
-            <input
-              id='first_name'
-              name='first_name'
-              type='text'
-              value={first_name}
-              onChange={handleOnChange}
-              className='block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-            />
-          </div>
-        </div>
-
-        <div>
-          <label
-            htmlFor='last_name'
-            className='block text-sm font-medium leading-6 text-gray-900'
-          >
-            Last Name
-          </label>
-          <div className='mt-2'>
-            <input
-              id='last_name'
-              name='last_name'
-              value={last_name}
-              onChange={handleOnChange}
-              type='text'
-              className='block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-            />
-          </div>
-        </div>
-
         <div>
           <label
             htmlFor='email'
@@ -106,7 +69,6 @@ export default function Register() {
             className='block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
           />
         </div>
-
         <div className='mt-2'>
           <button
             type='submit'
@@ -119,3 +81,5 @@ export default function Register() {
     </div>
   );
 }
+
+export default Login;

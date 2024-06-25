@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ProductSorting from './ProductSorting';
+//import ProductSorting from './ProductSorting';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
