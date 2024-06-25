@@ -50,7 +50,7 @@ Additional Notes
 This project is a demonstration of front-end development skills focusing on React.js and state management using Context API.
 Future enhancements could include implementing backend functionality for user authentication, cart persistence, and order processing.
 Author
-Developed by [Your Name]
+Developed by Angela Bello
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
