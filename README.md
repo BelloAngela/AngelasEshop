@@ -1,13 +1,11 @@
 # Angela's EShop
 
-Welcome to my E-Shop, a fully-functional front-end e-commerce application built as a capstone project. This project allows users to browse, view details, sort, and filter products. Additionally, logged-in users can add items to their cart, edit quantities, remove products, and simulate a checkout process.
+Welcome to my E-Shop, a fully-functional front-end e-commerce application built as a capstone project. This project allows users to browse, view details, sort, and filter products.  Users can add items to their cart, edit quantities, remove products, and simulate a checkout process.
 
 Features
 Product Listings: Browse through a variety of products, including categories such as men's clothing and women's clothing.
 
 Product Details: View detailed information about each product, including descriptions, photos, and prices.
-
-Sorting and Filtering: Sort products by price (low to high or high to low) and by name (A to Z or Z to A).
 
 Cart Management: Add items to the cart, adjust quantities, remove products, and clear the entire cart.
 
