@@ -1,5 +1,3 @@
-// ProductList.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 //import ProductSorting from './ProductSorting';
@@ -7,7 +5,7 @@ import axios from 'axios';
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
-  const [sortOption, setSortOption] = useState('default');
+  //const [sortOption, setSortOption] = useState('default'); // Commenting out setSortOption
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -26,27 +24,29 @@ const ProductList = () => {
   useEffect(() => {
     // Function to handle sorting based on selected option
     const sortProducts = () => {
-      switch (sortOption) {
-        case 'price-asc':
-          setSortedProducts([...products].sort((a, b) => a.price - b.price));
-          break;
-        case 'price-desc':
-          setSortedProducts([...products].sort((a, b) => b.price - a.price));
-          break;
-        case 'title-asc':
-          setSortedProducts([...products].sort((a, b) => a.title.localeCompare(b.title)));
-          break;
-        case 'title-desc':
-          setSortedProducts([...products].sort((a, b) => b.title.localeCompare(a.title)));
-          break;
-        default:
-          setSortedProducts([...products]);
-          break;
-      }
+      // Commenting out switch statement related to sortOption
+      // switch (sortOption) {
+      //   case 'price-asc':
+      //     setSortedProducts([...products].sort((a, b) => a.price - b.price));
+      //     break;
+      //   case 'price-desc':
+      //     setSortedProducts([...products].sort((a, b) => b.price - a.price));
+      //     break;
+      //   case 'title-asc':
+      //     setSortedProducts([...products].sort((a, b) => a.title.localeCompare(b.title)));
+      //     break;
+      //   case 'title-desc':
+      //     setSortedProducts([...products].sort((a, b) => b.title.localeCompare(a.title)));
+      //     break;
+      //   default:
+      //     setSortedProducts([...products]);
+      //     break;
+      // }
+      setSortedProducts([...products]); // Setting sorted products directly without sorting
     };
 
     sortProducts();
-  }, [products, sortOption]);
+  }, [products]); // Removing sortOption dependency
 
   //const handleSortChange = (value) => {
    // setSortOption(value);
