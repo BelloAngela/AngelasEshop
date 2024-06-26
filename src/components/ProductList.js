@@ -48,9 +48,9 @@ const ProductList = () => {
     sortProducts();
   }, [products, sortOption]);
 
-  const handleSortChange = (value) => {
-    setSortOption(value);
-  };
+  //const handleSortChange = (value) => {
+   // setSortOption(value);
+  //};
 
   return (
     <div>
