@@ -20,7 +20,7 @@ API: Utilized the Fake Store API (https://fakestoreapi.com/) for fetching produc
 
 State Management: Context API for managing global state (cart state, product state).
 
-Deployment: Deployed on Netlify for live preview.
+Deployment: Deployed on Render for live view: https://angelaseshop.onrender.com
 
 
 Getting Started
