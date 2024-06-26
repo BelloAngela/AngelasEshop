@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import {getMe} from '../API';
 
 import {useAuthStatus} from '../components/hooks/useAuthStatus';
-import Spinner from '../components/Spinner';
+//import Spinner from '../components/Spinner';
 
 export default function Profile() {
   const [user, setUser] = useState(null);
