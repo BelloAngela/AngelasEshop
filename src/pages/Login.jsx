@@ -1,7 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 import {useState, useContext} from 'react';
 import {login} from '../API';
-import AuthContext from '../context/AuthContext';
+import AuthContext from '../contexts/AuthContext';
 function Login() {
   const {setToken} = useContext(AuthContext);
   const [formData, setFormData] = useState({

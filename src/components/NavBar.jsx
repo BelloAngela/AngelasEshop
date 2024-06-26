@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 import {Link} from 'react-router-dom';
-import {useAuthStatus} from '../hooks/useAuthStatus';
-import AuthContext from '../context/AuthContext';
+import {useAuthStatus} from './hooks/useAuthStatus';
+import AuthContext from '../contexts/AuthContext';
 function NavBar() {
   const {setToken} = useContext(AuthContext);
   const {loggedIn} = useAuthStatus();

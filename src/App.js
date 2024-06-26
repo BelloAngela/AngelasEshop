@@ -5,7 +5,7 @@ import Register from './pages/Register';
 import Login from './pages/Login'; 
 import Profile from './pages/Profile'; 
 import PrivateRoute from './components/PrivateRoute';
-
+import { AuthProvider } from './contexts/AuthContext';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 import ProductList from './components/ProductList';
@@ -17,8 +17,8 @@ import Footer from './components/Footer';
 const App = () => {
   return (
     <>
-      <AuthProvider>
-        <CartProvider>
+       <AuthProvider>
+        {/*<CartProvider>*/} 
           <Router>
             <NavBar />
             <div className='overflow-hidden'>
@@ -35,8 +35,8 @@ const App = () => {
               <Footer />
             </div>
           </Router>
-        </CartProvider>
-      </AuthProvider>
+        {/* </CartProvider>*/}
+      </AuthProvider> 
     </>
   );
 }

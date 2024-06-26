@@ -1,8 +1,10 @@
 import {useNavigate} from 'react-router-dom';
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import {register} from '../API';
+import AuthContext from '../contexts/AuthContext';
 
 export default function Register() {
+  const {setToken} = useContext(AuthContext);
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -23,6 +25,8 @@ export default function Register() {
     event.preventDefault();
     const result = await register(formData);
     if (result.user) {
+      
+     setToken(result.token);
       navigate('/profile');
     }
   }

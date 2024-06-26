@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {getMe} from '../API';
 
-import {useAuthStatus} from '../hooks/useAuthStatus';
+import {useAuthStatus} from '../components/hooks/useAuthStatus';
 import Spinner from '../components/Spinner';
 
 export default function Profile() {
